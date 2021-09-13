@@ -14,14 +14,10 @@
 </head>
 <body style="background-color:#424242;">
 <body>
-       <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter@1.1.1/dist/mc-player-counter.min.js"></script>
-
     <object data="https://cdn.battlecraft.network/battlecraft.svg" width="64" height="64"> </object>
     <centre>
-    <h1 id="bcntitle" style="color:rgb(255, 255, 255);font-family:Verdana;text-align:center;font-size:600%;">Battlecraft Network</h1>
-    <p style="text-align:center;font-family:Verdana;"><button id="copyButton">Copy IP</button></p>
-            <h1 id="playercount" style="color:rgb(255, 255, 255);font-family:Verdana;text-align:center;font-size:200%;">There are <span data-playercounter-ip="mc.battlecraft.network">0</span> players online
-</h1>    
+    <h1 id="bcntitle" >Battlecraft Network</h1>
+    <p style="text-align:center;font-family:Verdana;"><button id="copyButton">Click To Copy IP</button></p>  
     <script>
     function copyText(text){
       function selectElementText(element) {
@@ -55,19 +51,20 @@
     document.getElementById("copyButton").onmouseout = function() {mouseOut()};
     
     function mouseOver() {
-        document.getElementById("copyButton").innerHTML = "Copy IP";
+        document.getElementById("copyButton").innerHTML = "Click To Copy IP";
     }
     
     function mouseOut() {
-        document.getElementById("copyButton").innerHTML = "Copy IP";
+        document.getElementById("copyButton").innerHTML = "Click To Copy IP";
     }
     </script>
     
     <style>
     #copyButton {
         border: none;
-        color: black;
-        background-color: #c4c4c4;
+        color: rgb(255, 255, 255);
+        font-family: Ubuntu, Verdana;
+        background-color: #757575;
         padding: 16px 16px;
         text-align: center;
         font-size: 16px;
@@ -80,9 +77,17 @@
     }
     
     #copyButton:hover {
-        background-color: #757575;
+        background-color: #555555;
+        font-family: Ubuntu, Verdana;
         color: white;
     }
+    #bcntitle {
+        color: #ffffff;
+        font-family: Ubuntu, Verdana;
+        text-align:center;
+        font-size:600%;
+    }
+    
     </style>
     </centre>
 </body>
