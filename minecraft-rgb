@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Battlecraft Netowrk" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://battlecraft.network" />
+    <meta property="og:image" content="https://cdn.battlecraft.network/64x64.png" />
+    <meta property="og:description" content="All Australian Hosted Gaming Network." />
+    <meta name="theme-color" content="#555555">
+    <title>Battlecraft Network</title>
+</head>
+<body style="background-color:#424242;">
+<body>
+    <object data="https://cdn.battlecraft.network/battlecraft.svg" width="64" height="64"> </object>
+    <centre>
+    <h1 id="bcntitle" >Battlecraft Network</h1>
+    <p style="text-align:center;font-family:Verdana;"><button id="copyButton">Click To Copy IP</button></p>  
+    <script>
+    function copyText(text){
+      function selectElementText(element) {
+        if (document.selection) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(element);
+          range.select();
+        } else if (window.getSelection) {
+          var range = document.createRange();
+          range.selectNode(element);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+        }
+      }
+      var element = document.createElement('DIV');
+      element.textContent = text;
+      document.body.appendChild(element);
+      selectElementText(element);
+      document.execCommand('copy');
+      element.remove();
+    }
+    
+    var btn = document.getElementById('copyButton');
+    btn.addEventListener('click', function(){
+      copyText("mc.battlecraft.network");
+      btn.innerHTML = "Copied!";
+    })
+    
+    
+    document.getElementById("copyButton").onmouseover = function() {mouseOver()};
+    document.getElementById("copyButton").onmouseout = function() {mouseOut()};
+    
+    function mouseOver() {
+        document.getElementById("copyButton").innerHTML = "Click To Copy IP";
+    }
+    
+    function mouseOut() {
+        document.getElementById("copyButton").innerHTML = "Click To Copy IP";
+    }
+    </script>
+    
+    <style>
+    #copyButton {
+        border: none;
+        color: rgb(255, 255, 255);
+        font-family: Ubuntu, Verdana;
+        background-color: #757575;
+        padding: 16px 16px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 95%;
+    }
+    
+    #copyButton:hover {
+        background-color: #555555;
+        font-family: Ubuntu, Verdana;
+        color: white;
+    }
+    #bcntitle {
+        color: #ffffff;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+        font-family: Ubuntu, Verdana;
+        text-align:center;
+        font-size:600%;
+    }
+    @-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+    </style>
+    </centre>
+</body>
+</html>
